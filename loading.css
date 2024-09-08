@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.container{
+    background-color: antiquewhite;
+    color: #171717;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.loading-page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, antiquewhite, #d3d3d3, #797474);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-page path{
+    height: 400px;
+    width: 400px;
+    stroke: #797474;
+    fill-opacity: 0;
+    stroke-width: 4px;
+    stroke-dasharray: 4500;
+    animation: draw 3s linear forwards;
+}
+
+@keyframes draw {
+    0%{
+        stroke-dashoffset: 4500;
+    }
+
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
